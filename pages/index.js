@@ -1,12 +1,14 @@
 import dynamic from 'next/dynamic';
 import React from 'react'
-import Header from './Hedaer';
+
 
 const  Testmolio = dynamic(() => import('./Testmolio'));
+
+const  Navabr = dynamic(() => import('./Hedaer'));
 const index = () => {
   return (
     <div>
-      <Header/>
+       <Navabr/>
      <Testmolio/>
     </div>
   )
