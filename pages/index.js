@@ -4,11 +4,14 @@ import React from 'react'
 
 const  Testmolio = dynamic(() => import('./Testmolio'));
 
-const  Navabr = dynamic(() => import('./Hedaer'));
+const  Hero = dynamic(() => import('./Hero'));
+const  Intro = dynamic(() => import('./Intro'));
 const index = () => {
   return (
     <div>
-       <Navabr/>
+        <Hero/>
+        <Intro />
+        
      <Testmolio/>
     </div>
   )

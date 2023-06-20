@@ -79,7 +79,7 @@ export default function Testmolio() {
         color="white"
         className="mb-12 text-xl opacity-80"
       >
-        Meet the engine which fired our red hot flame, PRAVEG meaning acceleration.
+        
       </Typography>
       <div className="flex justify-center gap-2">
         <a href="https://www.instagram.com/p/ClgYFn4tuOd/">
@@ -112,7 +112,6 @@ export default function Testmolio() {
         className="mb-12 text-xl opacity-80"
       >
 
-        We are ready to boom on our journey to space. 
       </Typography>
       <div className="flex gap-2">
         <a href="https://www.instagram.com/p/CnlfmaUMRIt/">
@@ -144,7 +143,7 @@ export default function Testmolio() {
         color="white"
         className="mb-12 text-xl opacity-80"
       >
-        During the recent test of our Engine, the Throat section of Nozzle experienced high heat flux.
+     
       </Typography>
       <div className="flex gap-2">
         <a href="https://www.instagram.com/p/CtUMYKVLrWK/">
@@ -176,7 +175,7 @@ export default function Testmolio() {
         color="white"
         className="mb-12 text-xl opacity-80"
       >
-        We have a 100% successful test on the third attempt for our 1.2 KN engine PRAVEG - 3.
+    
        
       </Typography>
       <div className="flex gap-2">
