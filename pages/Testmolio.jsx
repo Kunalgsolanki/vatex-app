@@ -50,7 +50,7 @@ export default function Testmolio() {
 
      ):(
 
-      <Carousel className="rounded-none  h-96">
+      <Carousel className="rounded-none  ">
 
 <div className="relative h-80 sm:h-96">
   <img
@@ -67,7 +67,7 @@ export default function Testmolio() {
       >
       
       <div
-      className="gradient-text text-center font-extrabold tracking-tighter text-5xl"
+      className="gradient-text text-center font-extrabold tracking-tighter text-4xl md:2xl "
     >
       OUR TESTIMONIALS
     </div>

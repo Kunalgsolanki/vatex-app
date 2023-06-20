@@ -1,19 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-html-link-for-pages */
 
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image'
-
-
-
-
-
-
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 const Hero = () => {
-
-
-
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -24,9 +15,8 @@ const Hero = () => {
   }, []);
 
   return (
-
     <>
- <style>
+      <style>
         {`
         .bg-video {
           position: relative;
@@ -88,72 +78,37 @@ const Hero = () => {
       `}
       </style>
 
+      <header className="bg-video top-28  border-b-2">
 
-
-      <header className="bg-video top-28 border-t-2 border-b-2">
-
-
-
-
-
-
-
-
-
-
-
-
+      {/*  earth video */}
         <div className="video-container">
 
-
-
-
-
-          <video className="video" autoPlay loop muted  >
-            <source src="/word1.mp4" type="video/mp4" />
-            {/* Add additional source elements for different video formats if needed */}
+          <video className="video" autoPlay loop muted>
+            <source src="/word2.webm" type="video/mp4" loading="lazy" />
+          
           </video>
-
-
         </div>
         <div className="logo-container">
-
-
-    
-   {
-    loading? (
-
-      <div
-      className="gradient-text text-center font-extrabold tracking-tighter text-8xl"
-    >
-       VARTIX AEROSPACE
-    </div>
-    ):(
-      <Image
-      height={800}
-      width={800}
-      src="/logo.png"
-      alt="VARTIX AEROSPACE Logo"
-      className="logo-image justify-center"
-      loading='lazy'
-
-
-    />
-      
-    )
-  
-   }
-
-         
-
-
+          {/*  reloaded text */}
+          {loading ? (
+            <div className="gradient-text text-center font-extrabold tracking-tighter text-8xl">
+              VARTIX AEROSPACE
+            </div>
+          ) : (
+            // vatix logo
+            <Image
+              height={800}
+              width={800}
+              src="/logo.png"
+              alt="VARTIX AEROSPACE Logo"
+              className="logo-image justify-center"
+              loading="lazy"
+            />
+          )}
         </div>
-
       </header>
-
-
     </>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

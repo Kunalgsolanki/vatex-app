@@ -3,11 +3,10 @@
 import Image from 'next/image';
 import React from 'react';
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
-import { BsPersonLinesFill } from "react-icons/bs";
+
 import { AiFillTwitterCircle } from "react-icons/ai";
 import {
-  AiOutlineMenu,
-  AiOutlineClose,
+  
 
   AiOutlineMail,
 } from "react-icons/ai";
@@ -41,16 +40,21 @@ const Footer = () => {
         <div className="flex justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13">
         <div className="flex items-center justify-between my-3 w-full sm:w-[80%]">
                 <div className="p-3 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-105">
-                  <FaLinkedinIn />
+                 
+                 
+                 <a href="https://www.linkedin.com/company/vartixaerospace/"> <FaLinkedinIn /></a> 
                 </div>
                 <div className="p-3 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-105">
-                <FaInstagram/>
+               
+               <a href="https://www.instagram.com/vartixaerospace/"> <FaInstagram/></a>
+                
                 </div>
                 <div className="p-3 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-105">
                   <AiOutlineMail />
                 </div>
                 <div className="p-3 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-105">
-                <AiFillTwitterCircle/>
+                  <a href="https://twitter.com/VartiXAerospace"> <AiFillTwitterCircle/></a>
+                
                 </div>
               </div>
         </div>

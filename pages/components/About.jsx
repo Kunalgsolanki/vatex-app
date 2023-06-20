@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
-import Team from './Team';
-import Image from 'next/image';
-
+import React from "react";
+import Team from "./Team";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -65,12 +64,11 @@ const About = () => {
             width: 50%;
             display: inline-block;
             
+           
+
+            
           }
-          .about .right img {
-            width: 100%;
-            margin-left: 200px;
-          }
-          .about .left h1 {
+          bout .left h1 {
             text-align: center;
             color: #f9f2f2;
             margin: 0 0 10px 0;
@@ -92,19 +90,19 @@ const About = () => {
             background-color: #070707;
           }
           .mission .right {
-            padding: 6% 0;
+            padding: 2% 0;
             width: 50%;
             display: inline-block;
             
-          
-           
           }
           .mission .left {
             float: left;
             width: 50%;
             display: inline-block;
           }
-       
+          .mission .left img {
+            width: 100%;
+          }
           .mission .right h1 {
             text-align: center;
             color: #efe7e7;
@@ -134,11 +132,11 @@ const About = () => {
             }
             .about .left hr, .mission .right hr {
               width: 35%;
-              margin: 20px auto;
+             
             }
             .about .left p, .mission .right p {
               width: 80%;
-              margin: 20px auto;
+             
             }
           }
           `,
@@ -154,54 +152,46 @@ const About = () => {
           <h1>Welcome to Our Website</h1>
         </div>
       </div>
-      <div className="about">
-        <div className="container">
-          <div className="left">
-            <h1>About Us</h1>
-            <hr />
-            <p>
-            Welcome to VARTIX AEROSPACE, an innovative aerospace company dedicated to pushing the boundaries of technological advancement and unlocking the limitless possibilities of space exploration. At VARTIX , our mission is to revolutionize the aerospace industry by developing cutting-edge solutions that propel humanity towards a future of sustainable space travel, scientific discovery, and the expansion of our understanding of the universe. Guided by a vision of pioneering new frontiers, we are committed to fostering collaboration, embracing bold ideas, and inspiring the next generation of space explorers. With our unwavering dedication to excellence, we aim to shape the future of space exploration and make space accessible to all, opening up a new era of boundless opportunities. Join us as we embark on this extraordinary journey into the cosmos.
-            </p>
-          </div>
-          <div className="right">
-            <Image
-              src="/s.jpg"
-              alt=""
-              width={1200}
-              height={1200}
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </div>
-      <div className="mission">
-        <div className="container">
-          <div className="left">
-            <Image
-              src="/L.jpeg"
-              alt=""
-              width={500}
-              height={230}
-              loading="lazy"
-            />
-          </div>
-          <div className="right">
-            <h1>Our Mission</h1>
-            <hr />
-            <p>
-              Sed eu urna id elit hendrerit vestibulum. Curabitur rhoncus
-              scelerisque dapibus. Nulla facilisi. Ut accumsan, dui eget
-              dignissim volutpat, nunc nunc scelerisque erat, nec placerat enim
-              leo non justo. Suspendisse potenti. Donec euismod metus quis justo
-              lobortis ullamcorper. Sed rhoncus metus quis ex auctor, non
-              tincidunt diam egestas. Phasellus nec placerat odio. Morbi ac
-              lorem sit amet dolor interdum auctor. Suspendisse quis tincidunt
-              urna.
+      <section className="bg-black dark:bg-gray-900">
+        <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+          <Image
+            className="w-full dark:hidden"
+            src="/s.jpg"
+            width={800}
+            height={800}
+            loading="lazy"
+            alt="dashboard image"
+          />
+
+          <div className="mt-4 md:mt-0">
+            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-white dark:text-white">
+              {" "}
+              About Us
+            </h2>
+            <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
+              VartiX Aerospace is Orbital vehicle service providing company and it aims to challenge the long driven problem of space transportation which is the environmental outlook. Also we aim to fill the gap that is generated due to high costing of rocket service and affordability of new upcoming start-ups in India by providing low cost service using reusable technique and in house manufacturing capacity. But we are not just restricted to space. We also provide 3D printing solutions and space education for making youth of India more aware about this exciting industry.
             </p>
           </div>
         </div>
-      </div>
-      <div className="team">
+      </section>
+      <section className="bg-black dark:bg-gray-900">
+        <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+          <div className="mr-auto place-self-center lg:col-span-7">
+            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"> OUR VISION</h1>
+            <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+            Considering the problems of space/rocket launches ie. pollution, we aim to provide solutions with our advance green propulsion system. The Hybrid Propulsion System will make the launch service more accessible and affordable. Along with launch services the key focus of the company is to research and develop newer systems and make the technology more reliable.
+              </p>
+
+          </div>
+          <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+            < Image src="/M.jpeg"
+              loading="lazy"
+              width={800}
+              height={800} alt={"mockup"} />
+          </div>
+        </div>
+      </section>
+      <div classNameName="team">
         <Team />
       </div>
     </div>
