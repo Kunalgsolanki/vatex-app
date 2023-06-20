@@ -11,16 +11,18 @@ export default function App({ Component, pageProps }) {
   return (
     <>
 
-    
+<ThemeProvider>
+  
      <Navbar/>
-     <ThemeProvider>
+ 
 
 
       
     <Component {...pageProps} />
-    </ThemeProvider>
+    
 
    <Footer/>
+   </ThemeProvider>
     
    
     </>

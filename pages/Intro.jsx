@@ -1,4 +1,8 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
+import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
+
 
 
 const  Intro = () => {
@@ -47,9 +51,12 @@ const  Intro = () => {
         {/* components */}
         <section className="min-h-screen -z-50 relative flex flex-1 items-center  justify-center overflow-hidden  mt-20 border-t-2 border-b-2">
               {/* video - start */}
-              <video className="absolute inset-0 w-full h-full object-cover" autoPlay loop muted>
-                <source src="/logo.mp4" type="video/mp4" />
-              </video>
+              <div  >
+                <Image width={1200 } height={1100} src="/P.jpeg"  className="absolute inset-0 w-full h-full object-cover" 
+                 loading='lazy'
+                 alt={""}
+                />
+              </div>
               {/* video - end */}
 
               {/* overlay - start */}
@@ -58,7 +65,7 @@ const  Intro = () => {
 
               {/* content - start */}
               <div className="relative z-10">
-                <h1 className="font-custom text-4xl font-bold">The sky is not the limit, s just the beginning.</h1>
+                <h1 className="font-custom text-4xl font-bold">THE SKY IS NOT THE LIMIT , ITS JUST THE BEGINNING.</h1>
               </div>
               {/* content - end */}
 

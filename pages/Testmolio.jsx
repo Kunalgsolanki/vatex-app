@@ -2,7 +2,7 @@
 "use client";
 import React from "react";
 
-import { Carousel, Typography, Button } from "@material-tailwind/react";
+import { Carousel, Typography, } from "@material-tailwind/react";
 import { AiOutlineInstagram } from "react-icons/ai";
 
 export default function Testmolio() {
@@ -25,14 +25,7 @@ export default function Testmolio() {
 
     
 
-<div className="text-center  "> {/* Added a container to center the content */}
-        <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-white">
-          Our Testmolioes
-        </h1>
-        <p className="text-lg font-normal text-white lg:text-xl dark:text-gray-400">
-          Our Successful missions
-        </p>
-      </div>
+
 
      {loading ? (
 
@@ -67,12 +60,24 @@ export default function Testmolio() {
   />
   <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
     <div className="w-3/4 text-center md:w-2/4">
-      <Typography
+    <Typography
         variant="h1"
         color="white"
         className="mb-4 text-2xl md:text-4xl lg:text-5xl"
       >
-        Praveg
+      
+      <div
+      className="gradient-text text-center font-extrabold tracking-tighter text-5xl"
+    >
+      OUR TESTIMONIALS
+    </div>
+      </Typography>
+      <Typography
+        variant="h1"
+        color="white"
+        className="mb-4 text-3xl md:text-2xl lg:text-3xl"
+      >
+        PRAVEG
       </Typography>
       <Typography
         variant="lead"
@@ -99,12 +104,14 @@ export default function Testmolio() {
   />
   <div className="absolute inset-0 grid h-full w-full items-center bg-black/75">
     <div className="w-3/4 pl-12 md:w-2/4 md:pl-20 lg:pl-32">
+
+    
       <Typography
         variant="h1"
         color="white"
         className="mb-4 text-2xl md:text-4xl lg:text-5xl"
       >
-        Praveg 2.0
+        PRAVEG 2.O
       </Typography>
       <Typography
         variant="lead"
@@ -136,7 +143,7 @@ export default function Testmolio() {
         color="white"
         className="mb-4 text-2xl md:text-4xl lg:text-5xl"
       >
-        Red Flaming Hot 🔥
+        RED FLAMING HOT 🔥
       </Typography>
       <Typography
         variant="lead"
@@ -168,7 +175,7 @@ export default function Testmolio() {
         color="white"
         className="mb-4 text-3xl md:text-2xl lg:text-3xl"
       >
-        Praveg 3.0
+        PRAVEG 3.O
       </Typography>
       <Typography
         variant="lead"

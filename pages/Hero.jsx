@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-html-link-for-pages */
 
-
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image'
 
 
 
@@ -14,7 +14,14 @@ const Hero = () => {
 
 
 
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
 
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
 
@@ -83,7 +90,7 @@ const Hero = () => {
 
 
 
-      <header className="bg-video">
+      <header className="bg-video top-28 border-t-2 border-b-2">
 
 
 
@@ -112,19 +119,32 @@ const Hero = () => {
         <div className="logo-container">
 
 
+    
+   {
+    loading? (
+
+      <div
+      className="gradient-text text-center font-extrabold tracking-tighter text-8xl"
+    >
+       VARTIX AEROSPACE
+    </div>
+    ):(
+      <Image
+      height={800}
+      width={800}
+      src="/logo.png"
+      alt="VARTIX AEROSPACE Logo"
+      className="logo-image justify-center"
+      loading='lazy'
 
 
+    />
+      
+    )
+  
+   }
 
-
-
-
-
-          <img
-            src="/logo.png"
-            alt="VATIEX AEROSPACE Logo"
-            className="logo-image justify-center"
-
-          />
+         
 
 
         </div>

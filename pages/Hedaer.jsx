@@ -16,7 +16,7 @@ const Navbar = () => {
     setSideMenu(!sideMenu);
   };
   return (
-    <div className="fixed w-full bg-black h-20 z-[100] bg-pink shadow-lg shadow-gray-300 top-0 left-0 right-0">
+    <div className="fixed w-full bg-black h-20 z-[100] shadow-lg top-0 left-0 right-0">
       <div className="flex items-center justify-between rounded-lg w-full h-full p-6">
         <div className="md:flex-1">
           <Image
