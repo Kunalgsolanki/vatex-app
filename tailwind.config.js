@@ -21,5 +21,6 @@ module.exports = withMT ({
   pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
 
 
+
   
 });

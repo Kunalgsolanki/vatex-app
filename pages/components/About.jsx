@@ -2,7 +2,7 @@
 import React from "react";
 import Team from "./Team";
 import Image from "next/image";
-import img1 from "../Images/Umang.png"
+
 
 const About = () => {
   return (

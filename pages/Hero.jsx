@@ -9,7 +9,7 @@ const Hero = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 7000);
 
     return () => clearTimeout(timer);
   }, []);

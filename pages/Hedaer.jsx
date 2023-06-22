@@ -21,18 +21,19 @@ const Navbar = () => {
     <>
     
    
-    <div className="fixed w-full bg-black h-20 z-[100] shadow-lg top-0 left-0 right-0">
+    <div className="fixed w-full bg-black h-50 md:h-40 z-[100] shadow-lg top-0 left-0 right-0">
       <div className="flex items-center justify-between rounded-lg w-full h-full p-6">
         <div className="md:flex-1">
           <Image
-           src="/logo.png"
-           height={100}
-           width={120}
+           src="/logo4.png"
+           height={150}
+           width={100}
            alt={""}
+
           
           />
         </div>
-        <div className="text-3xl md:flex-1 md:mr-10">
+        <div className="text-2xl md:flex-1 md:mr-10">
           <ul className="items-center text-white  justify-between hidden md:flex">
             <Link href="/">
               <li className="text-white ">Home</li>
@@ -86,10 +87,10 @@ const Navbar = () => {
           <div className="flex flex-col  text-white  py-4">
             <ul className="uppercase">
               <Link href="/">
-                <li className="py-4 text-3xl text-white  ">Home</li>
+                <li className="py-4 text-2xl text-white  ">Home</li>
               </Link>
               <Link href="/components/About">
-                <li className="py-4 text-3xl text-white ">About</li>
+                <li className="py-4 text-2xl text-white ">About</li>
               </Link>
              <SB/>
             </ul>
