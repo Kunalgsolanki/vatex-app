@@ -1,8 +1,22 @@
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import  Form from "./Form"
+ const initValues = {
+  name:"",
+  email:"",
+  subject:"",
+   message :""
+ }
+ const initState = { values :initValues 
+
+
+}
 
 const InternshipCardForm = () => {
+  
+  //  for form to nodemailer 
+   const [ state , setState] = useState(initState);
+   const { values} = state
   const [loading, setLoading] = useState(true);
   const [imageError, setImageError] = useState(false);
 
@@ -39,6 +53,14 @@ const InternshipCardForm = () => {
       setFormSubmitted(true);
     }
   };
+
+  const handlechange=  ({target})=> setState((pre)=>({
+    ...pre,
+    values:{
+      [target.name]:target.value
+      
+    }
+  }))
 
   return (
     <>
@@ -83,16 +105,26 @@ const InternshipCardForm = () => {
               <h2 className="text-2xl font-bold mb-4">Internship Application</h2>
               <form onSubmit={handleSubmit}>
                 <div className="mb-4">
-                  <label htmlFor="name" className="block font-bold mb-2">
+                  <label htmlFor="name"   className="block font-bold mb-2">
                     Name
                   </label>
                   <input
                     type="text"
                     id="name"
+                    name='name'
+     
                     className="w-full p-2 border border-gray-300 text-black rounded"
                     placeholder="Enter your name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    value={ [ name   ]}
+                    onChange={(e) =>  {
+                      
+                      setName(e.target.value)
+                    
+                    
+                     handlechange
+                    }
+                    
+                    }
                   />
                 </div>
 
@@ -189,7 +221,7 @@ const InternshipCardForm = () => {
                 </div>
 
                 <label for="countries" class="block mb-2 text-sm font-medium text-white dark:text-white"> Department</label>
-<select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+<select id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
   <option> Computer </option>
   <option> Electrical</option>
   <option>Mechanical </option>
@@ -198,7 +230,7 @@ const InternshipCardForm = () => {
 
                 {/* Year */}
                 <div className="mb-4">
-                  <label htmlFor="year" className="block font-bold mb-2">
+                  <label for="year" className="block font-bold mb-2">
                     Year
                   </label>
                   <input

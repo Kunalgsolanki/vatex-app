@@ -6,9 +6,11 @@ import {
 
   AiOutlineMail,
 } from "react-icons/ai";
+
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsPersonLinesFill } from "react-icons/bs";
 import Image from "next/image";
+import SB from "./SB"
 
 const Navbar = () => {
   const [sideMenu, setSideMenu] = useState(false);
@@ -16,13 +18,16 @@ const Navbar = () => {
     setSideMenu(!sideMenu);
   };
   return (
+    <>
+    
+   
     <div className="fixed w-full bg-black h-20 z-[100] shadow-lg top-0 left-0 right-0">
       <div className="flex items-center justify-between rounded-lg w-full h-full p-6">
         <div className="md:flex-1">
           <Image
            src="/logo.png"
-           height={50}
-           width={50}
+           height={100}
+           width={120}
            alt={""}
           
           />
@@ -35,12 +40,11 @@ const Navbar = () => {
             <Link href="/components/About">
               <li className= " text-white ">About</li>
             </Link>
-            <Link href="/components/Service">
-              <li className="text-white ">Services</li>
-            </Link>
-            <Link href="/components/Internship">
-              <li className="text-white ">Internship</li>
-            </Link>
+            <>
+            <SB/>
+            </>
+           
+        
            
             
           </ul>
@@ -87,12 +91,7 @@ const Navbar = () => {
               <Link href="/components/About">
                 <li className="py-4 text-3xl text-white ">About</li>
               </Link>
-              <Link href="/components/Service">
-                <li className="py-4 text-3xl text-white ">Services</li>
-              </Link>
-              <Link href="/components/Internship">
-                <li className="py-4 text-3xl text-white ">Internship</li>
-              </Link>
+             <SB/>
             </ul>
             <div className="pt-20">
               <p className="uppercase tracking-widest text-[#5651e5]">
@@ -117,6 +116,7 @@ const Navbar = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

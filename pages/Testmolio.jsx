@@ -4,6 +4,7 @@ import React from "react";
 
 import { Carousel, Typography, } from "@material-tailwind/react";
 import { AiOutlineInstagram } from "react-icons/ai";
+import Image from "next/image";
 
 export default function Testmolio() {
     const [loading, setLoading] =React. useState(true);
@@ -97,8 +98,10 @@ export default function Testmolio() {
 
 {/* Slide 2 */}
 <div className="relative h-80 sm:h-96">
-  <img
-    src="slide3.gif"
+  <Image
+   width={500}
+   height={500}
+    src="/P2.jpeg"
     alt="image 2"
     className="h-full w-full object-cover"
   />

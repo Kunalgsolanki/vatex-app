@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from 'next/image'
 import React from 'react'
+
 
 const Team = () => {
   return (
@@ -14,9 +16,9 @@ const Team = () => {
 
     <div className="lg:gap-xl-12 grid gap-x-6 md:grid-cols-2 lg:grid-cols-4">
       <div className="mb-12 lg:mb-0">
-        <img className="mx-auto mb-6 rounded-lg shadow-lg dark:shadow-black/20 w-[150px]" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).jpg" alt="avatar" />
-        <h5 className="mb-4 text-lg font-bold">Alan Turing</h5>
-        <p className="mb-6">Frontend Developer</p>
+        <Image className="mx-auto mb-6 rounded-lg shadow-lg dark:shadow-black/20 " width={1000} height={1000} src="/Umang.png" alt="avatar" />
+        <h5 className="mb-4 text-lg font-bold">UMANG SUDANI</h5>
+        <p className="mb-6">FOUNDER AND CEO</p>
         <ul className="mx-auto flex list-inside justify-center">
           <a href="#!" className="px-2">
            
@@ -45,9 +47,9 @@ const Team = () => {
         </ul>
       </div>
       <div className="mb-12 lg:mb-0">
-        <img className="mx-auto mb-6 rounded-lg shadow-lg dark:shadow-black/20 w-[150px]" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(4).jpg" alt="avatar" />
-        <h5 className="mb-4 text-lg font-bold">Veronica Smith</h5>
-        <p className="mb-6">Backend Developer</p>
+      <Image className="mx-auto mb-6 rounded-lg shadow-lg dark:shadow-black/20 " width={1000} height={1000} src="/Vatsal.png" alt="avatar" />
+        <h5 className="mb-4 text-lg font-bold">VATSAL </h5>
+        <p className="mb-6">EMPLOYEE</p>
         <ul className="mx-auto flex list-inside justify-center">
           <a href="#!" className="px-2">
            
@@ -76,9 +78,9 @@ const Team = () => {
         </ul>
       </div>
       <div className="mb-12 md:mb-0">
-        <img className="mx-auto mb-6 rounded-lg shadow-lg dark:shadow-black/20 w-[150px]" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).jpg" alt="avatar" />
-        <h5 className="mb-4 text-lg font-bold">Tom Johnson</h5>
-        <p className="mb-6">Digital Marketing Analyst</p>
+      <Image className="mx-auto mb-6 rounded-lg shadow-lg dark:shadow-black/20 " width={1000} height={1000} src="/Keyur.png" alt="avatar" />
+        <h5 className="mb-4 text-lg font-bold">KEYUR</h5>
+        <p className="mb-6">EMPLOYEE</p>
         <ul className="mx-auto flex list-inside justify-center">
           <a href="#!" className="px-2">
       
@@ -107,9 +109,9 @@ const Team = () => {
         </ul>
       </div>
       <div className="mb-12 md:mb-0">
-        <img className="mx-auto mb-6 rounded-lg shadow-lg dark:shadow-black/20 w-[150px]" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(31).jpg" alt="avatar" />
-        <h5 className="mb-4 text-lg font-bold">Emma Lovelace</h5>
-        <p className="mb-6">Web Designer</p>
+      <Image className="mx-auto mb-6 rounded-lg shadow-lg dark:shadow-black/20 " width={1000} height={1000} src="/Hiral.png" alt="avatar" />
+        <h5 className="mb-4 text-lg font-bold">HIRAL </h5>
+        <p className="mb-6">EMPLOYEE</p>
         <ul className="mx-auto flex list-inside justify-center">
           <a href="#!" className="px-2">
           

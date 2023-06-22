@@ -78,7 +78,7 @@ const Hero = () => {
       `}
       </style>
 
-      <header className="bg-video top-28  border-b-2">
+      <header className="bg-video top-28  border-b-2 border-gray-800">
 
       {/*  earth video */}
         <div className="video-container">
@@ -91,18 +91,21 @@ const Hero = () => {
         <div className="logo-container">
           {/*  reloaded text */}
           {loading ? (
-            <div className="gradient-text text-center font-extrabold tracking-tighter text-8xl">
+            <div className="gradient-text text-center font-extrabold tracking-tighter text-3xl md:text-6xl">
               VARTIX AEROSPACE
             </div>
           ) : (
             // vatix logo
             <Image
-              height={800}
-              width={800}
+              height={700}
+              width={700}
               src="/logo.png"
               alt="VARTIX AEROSPACE Logo"
               className="logo-image justify-center"
               loading="lazy"
+              style={{
+                opacity:"0.5"
+              }}
             />
           )}
         </div>

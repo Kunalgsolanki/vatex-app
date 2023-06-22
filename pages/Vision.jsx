@@ -70,10 +70,7 @@ const Vision = () => {
             VISION
           </div>
           <h1 className="font-custom text-2xl font-bold max-w-3xl mx-auto px-4 mt-10 text-start sm:px-6">
-            Considering the problems of space/rocket launches, i.e., pollution, we aim to provide solutions with our
-            advanced green propulsion system. The Hybrid Propulsion System will make the launch service more accessible
-            and affordable. Along with launch services, the key focus of the company is to research and develop newer
-            systems and make the technology more reliable.
+        VARTIX     Aerospace is driven by a bold vision to revolutionize the space industry. Through innovation, sustainability, and collaboration, we aim to unlock the vast potential of space, expand human knowledge, and pave the way for a future where space exploration benefits all of humanity.
           </h1>
         </div>
         {/* content - end */}

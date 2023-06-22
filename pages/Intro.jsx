@@ -49,12 +49,16 @@ const  Intro = () => {
 
       <div>
         {/* components */}
-        <section className="min-h-screen -z-50 relative flex flex-1 items-center  justify-center overflow-hidden  mt-20 border-t-2 border-b-2">
+        <section className="min-h-screen -z-50 relative flex flex-1 items-center  justify-center overflow-hidden  mt-20  border-b-2">
               {/* video - start */}
               <div  >
                 <Image width={1200 } height={1100} src="/P.jpeg"  className="absolute inset-0 w-full h-full object-cover" 
                  loading='lazy'
                  alt={""}
+                 style={{
+                 objectFit:"cover"
+   
+                 }}
                 />
               </div>
               {/* video - end */}
