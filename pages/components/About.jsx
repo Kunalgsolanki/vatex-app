@@ -175,23 +175,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="bg-black dark:bg-gray-900">
-        <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-          <div className="mr-auto place-self-center lg:col-span-7">
-            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"> OUR VISION</h1>
-            <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
-            Considering the problems of space/rocket launches ie. pollution, we aim to provide solutions with our advance green propulsion system. The Hybrid Propulsion System will make the launch service more accessible and affordable. Along with launch services the key focus of the company is to research and develop newer systems and make the technology more reliable.
-              </p>
-
-          </div>
-          <div className="hidden lg:mt-0 lg:col-span-5 lg:flex ">
-            < Image src="/R.jpeg"
-              loading="lazy"
-              width={800}
-              height={800} alt={"mockup"} />
-          </div>
-        </div>
-      </section>
+      
       <div className="team">
         <Team />
       </div>

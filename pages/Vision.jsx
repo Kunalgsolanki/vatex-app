@@ -97,8 +97,13 @@ const Vision = () => {
                     ) : (
                         // vatix logo
                         <div className="relative z-10">
-                            <p className="font-custom text-2xl font-bold"> Considering the problems of space/ rocket lauches i.w polution, we aim to provide a solution with our advance green propulsion</p>
+                          <div className="gradient-text text-center mt-20  font-extrabold tracking-tighter text-3xl md:text-6xl">
+                            VISION
                         </div>
+                        <p className="font-custom text-2xl font-bold text-start sm:text-center">
+                          Considering the problems of space/rocket launches, such as pollution, we aim to provide a solution with our advanced green propulsion.
+                        </p>
+                      </div>
                     )}
                 </div>
             </header>

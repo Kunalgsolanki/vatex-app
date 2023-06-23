@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="pb-6 col-span-full md:pb-0 md:col-span-6">
           <a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 md:justify-start">
             <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-400">
-              <Image  src="/logo.png" width={400} height={400}  className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-400"/>
+              <Image  src="/logo.png" width={400} height={400}  className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-400" alt=''/>
             </div>
             <span className="self-center text-2xl font-semibold">VARTIX AEROSPECE</span>
           </a>
@@ -38,7 +38,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="flex justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13">
-        <div className="flex items-center justify-between my-3 w-full sm:w-[80%]">
+        <div className="flex items-center justify-between my-3 w-full sm:w-[100%]">
                 <div className="p-3 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-105">
                  
                  
