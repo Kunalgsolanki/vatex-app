@@ -25,8 +25,6 @@ const variants = {
 };
 
 
-
-
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   

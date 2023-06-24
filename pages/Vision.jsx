@@ -2,22 +2,23 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import { motion } from "framer-motion";
+
 
 const Vision = () => {
-    const [loading, setLoading] = useState(true);
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setLoading(false);
-        }, 7000);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
 
-        return () => clearTimeout(timer);
-    }, []);
+    return () => clearTimeout(timer);
+  }, []);
 
-    return (
-        <>
-            <style>
-                {`
+  return (
+    <>
+      <style>
+        {`
         .bg-video {
           position: relative;
         }
@@ -76,39 +77,66 @@ const Vision = () => {
           }
         }
       `}
-            </style>
+      </style>
 
-            <header className="bg-video  border-t-2 border-b-2 border-gray-800">
+      <header className="bg-video  border-t-2 border-b-2 border-gray-800">
 
-                {/*  earth video */}
-                <div className="video-container">
+        {/*  earth video */}
+        <div className="video-container">
 
-                    <video className="video" autoPlay loop muted>
-                        <source src="/V.webm" type="video/mp4" loading="lazy" />
+          <video className="video" autoPlay loop muted>
+            <source src="/V.webm" type="video/mp4" loading="lazy" />
 
-                    </video>
-                </div>
-                <div className="logo-container">
-                    {/*  reloaded text */}
-                    {loading ? (
-                        <div className="gradient-text text-center font-extrabold tracking-tighter text-3xl md:text-6xl">
-                            VARTIX AEROSPACE
-                        </div>
-                    ) : (
-                        // vatix logo
-                        <div className="relative z-10">
-                          <div className="gradient-text text-center mt-20  font-extrabold tracking-tighter text-3xl md:text-6xl">
-                            VISION
-                        </div>
-                        <p className="font-custom text-2xl font-bold text-start sm:text-center">
-                          Considering the problems of space/rocket launches, such as pollution, we aim to provide a solution with our advanced green propulsion.
-                        </p>
+          </video>
+        </div>
+        <div className="logo-container">
+          {/*  reloaded text */}
+          {loading ? (
+            <div className="gradient-text text-center font-extrabold tracking-tighter text-3xl md:text-6xl">
+              VARTIX AEROSPACE
+            </div>
+          ) : (
+
+            <div className="relative z-10 mb-60">
+
+
+              <section className="bg-transparent dark:bg-gray-900">
+                <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+                  <div className="max-w-screen-md">
+                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-white dark:text-white">
+                    <motion.div
+                className="gradient-text text-center mt-20 font-extrabold tracking-tighter text-3xl md:text-6xl"
+                initial={{ opacity: 0, y: -20 }} // Initial animation properties
+                animate={{ opacity: 1, y: 0 }} // Animation properties to transition to
+                transition={{ duration: 0.5, delay: 0.3 }} // Transition duration and delay
+              >
+                      <div className="gradient-text text-start mt-20  font-extrabold tracking-tighter text-7xl ">
+                        VISION
                       </div>
-                    )}
+                      </motion.div>
+                    </h2>
+                    <motion.div
+                className="text-container"
+                initial={{ opacity: 0, y: -20 }} // Initial animation properties
+                animate={{ opacity: 1, y: 0 }} // Animation properties to transition to
+                transition={{ duration: 1, delay: 1 }} // Transition duration and delay
+              >
+                    <p className=" text-white sm:text-xl font-semibold dark:text-gray-400">                     Considering the problems of space/rocket launches, such as pollution, we aim to provide a solution with our advanced green propulsion.</p>
+                    <p className="  font-semibold text-white sm:text-xl dark:text-gray-400">  To bring the knowledge of Rocket Science and the concept of DIY in rocketry field so that it can be accessed by space enthusiasts more easily. </p>
+                    <p className="  font-semibold text-white sm:text-xl dark:text-gray-400"> To improve the current technology and to make it. more reliable for the future development </p>
+
+                    </motion.div>
+                  </div>
                 </div>
-            </header>
-        </>
-    );
+              </section>
+            </div>
+
+
+          )}
+        </div>
+      </header>
+    </>
+  );
 };
 
 export default Vision;

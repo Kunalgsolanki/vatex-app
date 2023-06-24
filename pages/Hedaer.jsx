@@ -7,6 +7,8 @@ import { BsPersonLinesFill } from "react-icons/bs";
 import Image from "next/image";
 import SB from "./SB";
 
+
+
 const Navbar = () => {
   const [sideMenu, setSideMenu] = useState(false);
   const handleSideMenu = () => {
@@ -14,8 +16,8 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className="fixed w-full bg-black h-20  z-[100] shadow-lg top-0 left-0 right-0">
-        <div className="flex items-center justify-between rounded-lg w-full h-full p-6">
+      <div className="fixed  w-full bg-black h-16   z-[100] shadow-lg top-0 left-0 right-0">
+        <div className="flex items-center  justify-between rounded-lg w-full h-full p-6">
           <div className="md:flex-1">
             <Image
               src="/logo4.png"
@@ -25,17 +27,21 @@ const Navbar = () => {
               className="rounded-full"
             />
           </div>
-          <div className="text-2xl md:flex-1 md:mr-10">
+          <div className="text-max-w-screen-xl md:text-max-w-screen-xl  md:flex-1  md:mr-10">
             <ul className="items-center text-white  justify-between hidden md:flex">
+              
               <Link href="/">
-                <li className="text-white ">Home</li>
+                <li className="text-white  hover:border-b-2 border-white ">HOME</li>
               </Link>
               <Link href="/components/About/About">
-                <li className=" text-white ">About</li>
+                <li className=" text-white hover:border-b-2 border-white ">ABOUT</li>
               </Link>
               <>
-                <SB />
+                <SB  />
               </>
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLSd0AHEPhX5PyPgTNvK0uE3katEzW75EI0EhVDf0oFifuzJ5zA/viewform">
+                <li className=" text-white hover:border-b-2 border-white "> LAUNCH  WITH US</li>
+              </Link>
             </ul>
             <div className="cursor-pointer md:hidden" onClick={handleSideMenu}>
               <AiOutlineMenu size={30} />

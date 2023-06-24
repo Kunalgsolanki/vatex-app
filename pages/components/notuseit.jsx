@@ -10,21 +10,11 @@ import Nayan from "./Images/Nayan.jpeg"
 import Khusi from "./Images/Khusi.jpeg"
 import Nancy from "./Images/Nancy.jpeg"
 import Bhumi from "./Images/Bhumi.jpeg"
-import { motion } from 'framer-motion';
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      delayChildren: 0.5
-    }
-  }
-}
 
-const item = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1 }
-}
+
+
+
+
 
 
 
@@ -44,45 +34,42 @@ const Team = () => {
           <div className="lg:gap-xl-12 grid gap-x-6 mt-5 md:grid-cols-2 lg:grid-cols-4">
             {/*  Umang */}
 
-            
-            <motion.div
-    variants={container}
-    initial="hidden"
-    animate="show"
-  >
-            <div className="mb-12 md:mb-0">
 
-          
-              <Image className="mx-auto mb-6 rounded-lg shadow-lg dark:shadow-black/20 " width={1000} height={1000} src={Umang} alt="avatar" />
-              
-              <h5 className="mb-4 text-lg font-bold">UMANG SUDANI</h5>
-              <p className="mb-6">FOUNDER AND CEO</p>
-            
-              <ul className="mx-auto flex list-inside justify-center">
-               
-              <motion.li variants={item} >
-                <a href="https://www.linkedin.com/in/umang-sudani-73b2a819b" className="px-2">
-
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                    className="h-3.5 w-3.5 text-primary dark:text-primary-400">
-                    <path fill="currentColor"
-                      d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
-                  </svg>
-                </a>
-                </motion.li>
-              </ul>
-              
-            </div>
-            </motion.div>
            
+
+              <div className="mb-12 md:mb-0">
+
+
+                <Image className="mx-auto mb-6 rounded-lg shadow-lg dark:shadow-black/20 " width={1000} height={1000} src={Umang} alt="avatar" />
+
+                <h5 className="mb-4 text-lg font-bold">UMANG SUDANI</h5>
+                <p className="mb-6">FOUNDER AND CEO</p>
+
+                <ul className="mx-auto flex list-inside justify-center">
+
+                
+                    <a href="https://www.linkedin.com/in/umang-sudani-73b2a819b" className="px-2">
+
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        className="h-3.5 w-3.5 text-primary dark:text-primary-400">
+                        <path fill="currentColor"
+                          d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                      </svg>
+                    </a>
+                 
+                </ul>
+
+              </div>
+        
+
             {/*  vatsal */}
             <div className="mb-12 lg:mb-0">
               <Image className="mx-auto mb-6 rounded-full shadow-lg dark:shadow-black/20 " width={3000} height={3000} src={Vatsal} alt="avatar1" />
               <h5 className="mb-4 text-lg font-bold">VATSAL </h5>
               <p className="mb-6">EMPLOYEE</p>
               <ul className="mx-auto flex list-inside justify-center">
-               
-               
+
+
                 <a href="#!" className="px-2">
 
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -99,8 +86,8 @@ const Team = () => {
               <h5 className="mb-4 text-lg font-bold">KEYUR</h5>
               <p className="mb-6">EMPLOYEE</p>
               <ul className="mx-auto flex list-inside justify-center">
-               
-               
+
+
                 <a href="https://www.linkedin.com/in/keyur-devganiya" className="px-2">
 
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -118,7 +105,7 @@ const Team = () => {
               <h5 className="mb-4 text-lg font-bold">HIRAL VORA </h5>
               <p className="mb-6">EMPLOYEE</p>
               <ul className="mx-auto flex list-inside justify-center">
-               
+
                 <a href="https://www.linkedin.com/in/vorahiral02" className="px-2">
 
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -127,13 +114,13 @@ const Team = () => {
                       d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
                   </svg>
                 </a>
-             
+
               </ul>
             </div>
           </div>
-         
 
-         
+
+
           <div className="lg:gap-xl-12 grid gap-x-6 md:grid-cols-2 lg:grid-cols-4 mt-12">
             {/*  Dirgh */}
             <div className="mb-12 lg:mb-0">
@@ -141,8 +128,8 @@ const Team = () => {
               <h5 className="mb-4 text-lg font-bold">DIRGH</h5>
               <p className="mb-6">EMPOYEE</p>
               <ul className="mx-auto flex list-inside justify-center">
-                
-                
+
+
                 <a href="https://www.linkedin.com/in/dirgh-bhatt-1888a81ab/" className="px-2">
 
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -159,7 +146,7 @@ const Team = () => {
               <h5 className="mb-4 text-lg font-bold">NAYAN </h5>
               <p className="mb-6">EMPLOYEE</p>
               <ul className="mx-auto flex list-inside justify-center">
-                
+
                 <a href="https://www.linkedin.com/in/nayan-sandpa-139632202/" className="px-2">
 
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -176,7 +163,7 @@ const Team = () => {
               <h5 className="mb-4 text-lg font-bold">KHUSI SHAH</h5>
               <p className="mb-6">EMPLOYEE</p>
               <ul className="mx-auto flex list-inside justify-center">
-                
+
                 <a href="https://www.linkedin.com/in/khushi-shah-970a52203" className="px-2">
 
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"

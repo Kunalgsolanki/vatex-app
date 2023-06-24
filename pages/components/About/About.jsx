@@ -3,13 +3,15 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 
-import Image from "next/image";
+
 import dynamic from "next/dynamic";
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 
-const  Team= dynamic(() => import('../Team'));
+
+const  Team= dynamic(() => import('../Team2'));
+const  Ab2= dynamic(() => import('./Ab2'));
 const scaleVariants = {
   whileInView: {
     scale: [0, 1],
@@ -24,7 +26,7 @@ const animateComponentsOnScroll = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
 
-  useEffect(() => {
+  React. useEffect(() => {
     if (inView) {
       controls.start({
         opacity: 1,
@@ -45,7 +47,7 @@ const animateComponentsOnScroll = () => {
 const About = () => {
   const animationProps = animateComponentsOnScroll();
   return (
-    <motion.div className="animate-component" {...animationProps}>
+
     <div>
       <style
         dangerouslySetInnerHTML={{
@@ -206,43 +208,22 @@ const About = () => {
           
         </div>
       </div>
-      <section className="bg-black dark:bg-gray-900">
-        <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-          <Image
-            className="w-full dark:hidden "
-            src="/s.jpg"
-            width={800}
-            height={800}
-            loading="lazy"
-            alt="dashboard image"
-          />
+     
 
-          <div className="mt-4 md:mt-0">
-            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-white dark:text-white">
-              {" "}
-              About Us
-            </h2>
-            <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
-              VartiX Aerospace is Orbital vehicle service providing company and it aims to challenge the long driven problem of space transportation which is the environmental outlook. Also we aim to fill the gap that is generated due to high costing of rocket service and affordability of new upcoming start-ups in India by providing low cost service using reusable technique and in house manufacturing capacity. But we are not just restricted to space. We also provide 3D printing solutions and space education for making youth of India more aware about this exciting industry.
-            </p>
-          </div>
-        </div>
-      </section>
+      <motion.div className="animate-component" {...animationProps}>
+      <Ab2/>
+      </motion.div>
       
       <div className="team">
       
-      <motion.div
-      whileInView={{ y: [-100, 0], opacity: [0, 1] }}
-      transition={{ duration: 0.5 }}
-      className="app__header-info"
-    > 
+      
         
+      <motion.div className="animate-component" {...animationProps}>
         <Team />
         </motion.div>
       </div>
     </div>
 
-    </motion.div>
   );
 };
 
