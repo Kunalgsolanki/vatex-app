@@ -1,10 +1,12 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/jsx-no-undef */
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 
 const  Team= dynamic(() => import('../Team'));
@@ -18,9 +20,32 @@ const scaleVariants = {
     },
   },
 };
+const animateComponentsOnScroll = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({
+        opacity: 1,
+        y: 0,
+        transition: { duration: 1 },
+      });
+    }
+  }, [controls, inView]);
+
+  return {
+    ref,
+    animate: controls,
+    initial: { opacity: 0, y: 100 },
+  };
+};
+
 
 const About = () => {
+  const animationProps = animateComponentsOnScroll();
   return (
+    <motion.div className="animate-component" {...animationProps}>
     <div>
       <style
         dangerouslySetInnerHTML={{
@@ -216,6 +241,8 @@ const About = () => {
         </motion.div>
       </div>
     </div>
+
+    </motion.div>
   );
 };
 

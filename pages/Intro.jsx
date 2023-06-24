@@ -56,7 +56,7 @@ const  Intro = () => {
                  loading='lazy'
                  alt={""}
                  style={{
-                 objectFit:"cover", 
+                 objectFit:"cover",
                  priority:"false" 
    
                  }}
