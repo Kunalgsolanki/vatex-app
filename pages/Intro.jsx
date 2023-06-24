@@ -12,7 +12,7 @@ const  Intro = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -56,7 +56,8 @@ const  Intro = () => {
                  loading='lazy'
                  alt={""}
                  style={{
-                 objectFit:"cover"
+                 objectFit:"cover", 
+                 priority:"false" 
    
                  }}
                 />

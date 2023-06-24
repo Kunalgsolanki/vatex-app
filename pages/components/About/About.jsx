@@ -1,8 +1,23 @@
+/* eslint-disable react/jsx-no-undef */
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import Team from "./Team";
-import Image from "next/image";
 
+import Image from "next/image";
+import dynamic from "next/dynamic";
+import { motion } from 'framer-motion';
+
+
+const  Team= dynamic(() => import('../Team'));
+const scaleVariants = {
+  whileInView: {
+    scale: [0, 1],
+    opacity: [0, 1],
+    transition: {
+      duration: 1,
+      ease: 'easeInOut',
+    },
+  },
+};
 
 const About = () => {
   return (
@@ -27,7 +42,7 @@ const About = () => {
           nav {
             width: 100%;
             height: 100px;
-            background-color: rgba(51, 51, 51, 0.3);
+           
             position: absolute;
             top: 0;
             z-index: 5;
@@ -36,10 +51,12 @@ const About = () => {
             width: 100%;
             height: 500px;
             opacity: 0.8;
-            background-color: rgb(0, 4, 6);
+            margin-top: 50px;
+            
+          
             background-image: url("https://cdn.pixabay.com/photo/2014/12/27/16/38/planet-581239_1280.jpg");
             background-size: cover;
-            background-position: bottom;
+            background-position: bottom 90px;
           }
           .container {
             width: 100%;
@@ -139,24 +156,35 @@ const About = () => {
               width: 80%;
              
             }
+            .header {
+              width: 100%;
+              height: 500px;
+              opacity: 0.8;
+             
+              
+            
+              background-image: url("https://cdn.pixabay.com/photo/2014/12/27/16/38/planet-581239_1280.jpg");
+              background-size: cover;
+              background-position: bottom;
+            }
           }
           `,
         }}
       />
       <nav>
         <div className="container">
-          <h1>About Us</h1>
+         
         </div>
       </nav>
-      <div className="header border-t-2 border-b-2">
+      <div className="header border-t-2 border-gray-900 -opacity-1 border-b-2">
         <div className="container">
-          <h1>Welcome to Our Website</h1>
+          
         </div>
       </div>
       <section className="bg-black dark:bg-gray-900">
         <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
           <Image
-            className="w-full dark:hidden"
+            className="w-full dark:hidden "
             src="/s.jpg"
             width={800}
             height={800}
@@ -177,7 +205,15 @@ const About = () => {
       </section>
       
       <div className="team">
+      
+      <motion.div
+      whileInView={{ y: [-100, 0], opacity: [0, 1] }}
+      transition={{ duration: 0.5 }}
+      className="app__header-info"
+    > 
+        
         <Team />
+        </motion.div>
       </div>
     </div>
   );

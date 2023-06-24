@@ -5,6 +5,8 @@ import { useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import dynamic from 'next/dynamic';
 const  Hero1 = dynamic(() => import('./Hero'));
+
+
 const  Intro2 = dynamic(() => import('./Intro'));
 const  Vision2 = dynamic(() => import('./Vision'));
 const  Missions = dynamic(() => import('./Testmolio'));
@@ -69,6 +71,7 @@ const Testmolio = () => {
   );
 };
 
+
 const Index = () => {
   return (
     <div>
@@ -76,6 +79,7 @@ const Index = () => {
       <Intro />
       <Vision />
       <Testmolio />
+    
     </div>
   );
 };
