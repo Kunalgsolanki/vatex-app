@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import localFont from 'next/font/local'
 
 import { ThemeProvider } from "@material-tailwind/react";
 import Navbar from "./Hedaer"
@@ -6,6 +7,7 @@ import Footer from './Footer';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
 
+const myFont = localFont({ src: './ArtifaktElement-Regular.ttf' })
 
 const variants = {
   initial: {
@@ -31,9 +33,10 @@ export default function App({ Component, pageProps }) {
  
   return (
     <>
+    
 
 <ThemeProvider>
-  
+<main className={myFont.className}>
      <Navbar/>
 
  
@@ -45,13 +48,17 @@ export default function App({ Component, pageProps }) {
         exit="exit"
         variants={variants}
       >
-    <Component {...pageProps} />
+       
+        <Component {...pageProps} />
+        
+    
   
 
     
     </motion.div>
     </AnimatePresence>
    <Footer/>
+   </main>
    </ThemeProvider>
     
    

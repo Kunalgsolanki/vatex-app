@@ -9,7 +9,7 @@ const Hero = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 3500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -91,7 +91,7 @@ const Hero = () => {
         <div className="logo-container">
           {/*  reloaded text */}
           {loading ? (
-            <div className="gradient-text text-center font-extrabold tracking-tighter text-3xl md:text-6xl">
+            <div className="gradient-text text-center  tracking-tighter text-3xl md:text-6xl">
               VARTIX AEROSPACE
             </div>
           ) : (

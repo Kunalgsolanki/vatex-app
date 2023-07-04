@@ -50,7 +50,7 @@ const Footer = () => {
                 
                 </div>
                 <div className="p-3 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-105">
-                  <a href="vartixaerospace@gmail.com"> <AiOutlineMail /></a> 
+                  <a href="mailto:vartixaerospace@gmail.com"> <AiOutlineMail /></a> 
                 </div>
                 <div className="p-3 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-105">
                   <a href="https://twitter.com/VartiXAerospace"> <AiFillTwitterCircle/></a>

@@ -4,14 +4,13 @@
 import React from "react";
 
 
-import dynamic from "next/dynamic";
+
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import Team from "../Team2";
+import Ab2 from "./Ab2";
 
 
-
-const  Team= dynamic(() => import('../Team2'));
-const  Ab2= dynamic(() => import('./Ab2'));
 const scaleVariants = {
   whileInView: {
     scale: [0, 1],
