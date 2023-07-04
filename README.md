@@ -45,4 +45,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Examples
 
 
-<img src="/kgs.gif" />
+<img src="./public/kgs.gif" />
